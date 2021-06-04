@@ -3,11 +3,11 @@ public class proyectos {
    private String titulo;
    private String descripcion;
    private int dificultad;
-   private int duracion;
+   private String duracion;
    private int cant_mx;
    private String fecha;
 
-    public proyectos(String titulo, String descripcion, int dificultad, int duracion, int cant_mx, String fecha) {
+    public proyectos(String titulo, String descripcion, int dificultad, String duracion, int cant_mx, String fecha) {
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.dificultad = dificultad;
@@ -40,11 +40,11 @@ public class proyectos {
         this.dificultad = dificultad;
     }
 
-    public int getDuracion() {
+    public String getDuracion() {
         return duracion;
     }
 
-    public void setDuracion(int duracion) {
+    public void setDuracion(String duracion) {
         this.duracion = duracion;
     }
 
