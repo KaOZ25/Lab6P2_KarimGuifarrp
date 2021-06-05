@@ -5,11 +5,15 @@
  */
 package lab6p2_karimguifarro;
 
+import java.util.logging.Logger;
+
 /**
  *
  * @author Karim Ozael
  */
-public class alumnos extends login{
+public class alumnos{
+    private String usuario;
+    private String contraseña;
     private String nombre;
     private String apellido;
     private int edad;
@@ -18,12 +22,10 @@ public class alumnos extends login{
     private int año_estudio;
     private int prom_grad;
     private String facultad;
-    public alumnos(String user, String contra) {
-        super(user, contra);
-    }
 
-    public alumnos(String nombre, String apellido, int edad, String ID, String carrera, int año_estudio, int prom_grad, String facultad, String user, String contra) {
-        super(user, contra);
+    public alumnos(String usuario, String contraseña, String nombre, String apellido, int edad, String ID, String carrera, int año_estudio, int prom_grad, String facultad) {
+        this.usuario = usuario;
+        this.contraseña = contraseña;
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
@@ -32,6 +34,22 @@ public class alumnos extends login{
         this.año_estudio = año_estudio;
         this.prom_grad = prom_grad;
         this.facultad = facultad;
+    }
+
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+
+    public String getContraseña() {
+        return contraseña;
+    }
+
+    public void setContraseña(String contraseña) {
+        this.contraseña = contraseña;
     }
 
     public String getNombre() {
@@ -100,7 +118,9 @@ public class alumnos extends login{
 
     @Override
     public String toString() {
-        return "alumnos{" + "nombre=" + nombre + ", apellido=" + apellido + ", edad=" + edad + ", ID=" + ID + ", carrera=" + carrera + ", a\u00f1o_estudio=" + año_estudio + ", prom_grad=" + prom_grad + ", facultad=" + facultad + super.toString()+'}';
+        return "alumnos{" + "usuario=" + usuario + ", contrase\u00f1a=" + contraseña + ", nombre=" + nombre + ", apellido=" + apellido + ", edad=" + edad + ", ID=" + ID + ", carrera=" + carrera + ", a\u00f1o_estudio=" + año_estudio + ", prom_grad=" + prom_grad + ", facultad=" + facultad + '}';
     }
+
+    
     
 }

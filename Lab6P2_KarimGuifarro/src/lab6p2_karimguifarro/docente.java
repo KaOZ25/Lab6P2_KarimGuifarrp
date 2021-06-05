@@ -1,7 +1,9 @@
 package lab6p2_karimguifarro;
 
 
-public class docente extends login{
+public class docente {
+    private String usuario;
+    private String contraseña;
     private String nombre;
     private String apellido;
     private int num_registro;
@@ -10,12 +12,9 @@ public class docente extends login{
     private int veces_clase;
     private String facultad;
 
-    public docente(String user, String contra) {
-        super(user, contra);
-    }
-
-    public docente(String nombre, String apellido, int num_registro, String titulo_uni, String titulo_pos, int veces_clase, String facultad, String user, String contra) {
-        super(user, contra);
+    public docente(String usuario, String contraseña, String nombre, String apellido, int num_registro, String titulo_uni, String titulo_pos, int veces_clase, String facultad) {
+        this.usuario = usuario;
+        this.contraseña = contraseña;
         this.nombre = nombre;
         this.apellido = apellido;
         this.num_registro = num_registro;
@@ -24,6 +23,24 @@ public class docente extends login{
         this.veces_clase = veces_clase;
         this.facultad = facultad;
     }
+
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+
+    public String getContraseña() {
+        return contraseña;
+    }
+
+    public void setContraseña(String contraseña) {
+        this.contraseña = contraseña;
+    }
+
+  
 
     public String getNombre() {
         return nombre;
@@ -83,8 +100,10 @@ public class docente extends login{
 
     @Override
     public String toString() {
-        return "docente{" + "nombre=" + nombre + ", apellido=" + apellido + ", num_registro=" + num_registro + ", titulo_uni=" + titulo_uni + ", titulo_pos=" + titulo_pos + ", veces_clase=" + veces_clase + ", facultad=" + facultad + super.toString() +'}';
+        return "docente{" + "usuario=" + usuario + ", contrase\u00f1a=" + contraseña + ", nombre=" + nombre + ", apellido=" + apellido + ", num_registro=" + num_registro + ", titulo_uni=" + titulo_uni + ", titulo_pos=" + titulo_pos + ", veces_clase=" + veces_clase + ", facultad=" + facultad + '}';
     }
+
+    
     
     
 }
